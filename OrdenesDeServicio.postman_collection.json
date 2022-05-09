@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "b4f4d380-9732-4c5f-9775-a8c22b81f82a",
+		"name": "Ordenes de Servicio",
+		"description": "Endpoints de la aplicación \"Ordenes de Servicio\" realizados para la organización Imaginamos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post-technician",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Jorge\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/post-technician",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post-technician"
+					]
+				},
+				"description": "#Permite crear los tecnicos necesarios para iniciar el proceso\r\n\r\n##Parametros:\r\n**name:** Nombre del tecnico que se va a crear\r\n\r\n##Retorna:\r\n**message:** Mensaje que indica el resultado del proceso\r\n**data:** Contiene la carga util de la respuesta, en este caso retorna los datos del tecnico creado:\r\n    **id:** Numero asignado automaticamente para identificar el tenico creado."
+			},
+			"response": [
+				{
+					"name": "localhost:3000/api/post-technician",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Jorge\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/post-technician",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post-technician"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9c-Bb8haxiC3X7d5UKdgaHtdGV6bkk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 03:59:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Technician created successfully\",\n    \"data\": {\n        \"name\": \"Jorge\",\n        \"id\": 3,\n        \"created_at\": \"2022-05-09T03:59:02.053Z\",\n        \"updated_at\": \"2022-05-09T03:59:02.053Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "post-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Quiero devolver mi soporte de TV\",\n    \"client_name\": \"Diana Jaramillo\",\n    \"client_address\": \"CLL 16 #23-34\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/post-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post-order"
+					]
+				},
+				"description": "#Permite a un cliente registrar ordenes de soporte \r\n\r\n##Parametros:\r\n**description:** Descripcion de el soporte que esta solicitando el cliente.\r\n**client_name:** Nombre del cliente que esta registrando la solicitud de soporte.\r\n**client_address:** Dirección del cliente donde debe presentarse el tecnico para realizar el soporte si se necesita.\r\n\r\n##Retorna:\r\n**message:** Mensaje que indica el resultado del proceso\r\n**data:** Contiene la carga util de la respuesta, en este caso retorna los datos del tecnico creado:\r\n    **technician_id:** Número que identifica al ténico asignado aleatoriamente.\r\n    **description:** Descripción de la necesidad del cliente y por el cual se esta solicitando soporte.\r\n    **client_name:** Nombre del cliente que solicita el soporte.\r\n    **client_address:** Dirección del cliente donde se debe presentar el tecnico para realizar el sporte de ser necesario.\r\n    **token:** Token aleatorio y único asignado a la solicitud de soporte creada por el cliente.\r\n    **id:** Número que identifica al soporte creado por el cliente."
+			},
+			"response": [
+				{
+					"name": "post-order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Quiero devolver mi soporte de TV\",\n    \"client_name\": \"Diana Jaramillo\",\n    \"client_address\": \"CLL 16 #23-34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/post-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "291"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"123-uhd2L8+Ht0DbnyC7wdlGczH+yvs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 04:10:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order created successfully\",\n    \"data\": {\n        \"technician_id\": 1,\n        \"description\": \"Quiero devolver mi soporte de TV\",\n        \"client_name\": \"Diana Jaramillo\",\n        \"client_address\": \"CLL 16 #23-34\",\n        \"token\": \"G5YZSC33EG4\",\n        \"id\": 25,\n        \"created_at\": \"2022-05-09T04:10:00.203Z\",\n        \"updated_at\": \"2022-05-09T04:10:00.203Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get-ordersByTechnician",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/get-ordersByTechnician/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"get-ordersByTechnician",
+						"1"
+					]
+				},
+				"description": "#Permite consultar las ordenes de soporte asignadas aleatoriamente al tecnico identificado por el numero enviado por URL.\r\n\r\n##Parametros por URL:\r\n**#:** Número que identifica al tecnico.\r\n\r\n##Retorna:\r\n**message:** Mensaje que indica el resultado del proceso\r\n**data:** Contiene la carga util de la respuesta, en este caso retorna las ordenes de soporte asociadas al tecnico:\r\n    **id:** Numero asignado automaticamente para identificar la solicitud de soporte.\r\n    **token:** Token generado aleatoriamente por el sistema como prueba de el registro de la orden.\r\n    **technician_id:** Número que identifica al tecnico asignado a la orden.\r\n    **description:** Descripción que dio el cliente de la necesidad de soporte que creada.\r\n    **client_name:** Nombre del cliente que realizó la solicitud de soporte.\r\n    **client_address:** Dirección del cliente donde se debe presentar el tecnico para realizar el soporte de ser necesario."
+			},
+			"response": [
+				{
+					"name": "get-ordersByTechnician",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/get-ordersByTechnician/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get-ordersByTechnician",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1200"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b0-dbkoGt5T9nw4IUcQHD8aIWZgbnc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 04:19:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Orders retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 12,\n            \"token\": \"PH86BCJLKN\",\n            \"technician_id\": 1,\n            \"description\": \"Quiero un nuevo soporte para mi TV\",\n            \"client_name\": \"Juliana\",\n            \"client_address\": \"CLL 16\",\n            \"created_at\": \"2022-05-08T23:49:20.923Z\",\n            \"updated_at\": \"2022-05-08T23:49:20.923Z\"\n        },\n        {\n            \"id\": 14,\n            \"token\": \"984BQBX7MN6\",\n            \"technician_id\": 1,\n            \"description\": \"Mi soporte para TV se despintó\",\n            \"client_name\": \"Katerine\",\n            \"client_address\": \"CLL 18\",\n            \"created_at\": \"2022-05-08T23:54:08.121Z\",\n            \"updated_at\": \"2022-05-08T23:54:08.121Z\"\n        },\n        {\n            \"id\": 18,\n            \"token\": \"OS8CIMHU7L\",\n            \"technician_id\": 1,\n            \"description\": \"Quiero devolver mi soporte\",\n            \"client_name\": \"Juliana\",\n            \"client_address\": \"CLL 16\",\n            \"created_at\": \"2022-05-09T01:23:26.783Z\",\n            \"updated_at\": \"2022-05-09T01:23:26.783Z\"\n        },\n        {\n            \"id\": 24,\n            \"token\": \"BWDRXBRHZIQ\",\n            \"technician_id\": 1,\n            \"description\": \"Quiero devolver mi soporte\",\n            \"client_name\": \"Juliana\",\n            \"client_address\": \"CLL 16\",\n            \"created_at\": \"2022-05-09T01:39:41.651Z\",\n            \"updated_at\": \"2022-05-09T01:39:41.651Z\"\n        },\n        {\n            \"id\": 25,\n            \"token\": \"G5YZSC33EG4\",\n            \"technician_id\": 1,\n            \"description\": \"Quiero devolver mi soporte de TV\",\n            \"client_name\": \"Diana Jaramillo\",\n            \"client_address\": \"CLL 16 #23-34\",\n            \"created_at\": \"2022-05-09T04:10:00.203Z\",\n            \"updated_at\": \"2022-05-09T04:10:00.203Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
